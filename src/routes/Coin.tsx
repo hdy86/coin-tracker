@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Helmet } from "react-helmet";
-import { useState, useEffect } from "react";
 import {
   Switch,
   Route,
@@ -10,9 +8,10 @@ import {
 } from "react-router";
 import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
+import { Helmet } from "react-helmet";
+import { fetchCoinInfo, fetchCoinTickers } from "../api";
 import Chart from "./Chart";
 import Price from "./Price";
-import { fetchCoinInfo, fetchCoinTickers } from "../api";
 
 const Container = styled.div`
   max-width: 480px;
@@ -159,23 +158,6 @@ function Coin() {
   );
 
   const loading = infoLoading || tickersLoading;
-
-  /* const [loading, setLoading] = useState(true);
-  const [info, setInfo] = useState<InfoData>();
-  const [priceInfo, setPriceInfo] = useState<PriceData>();
-  useEffect(() => {
-    (async () => {
-      const infoData = await (
-        await fetch(`https://api.coinpaprika.com/v1/coins/${coinId}`)
-      ).json();
-      const priceData = await (
-        await fetch(`https://api.coinpaprika.com/v1/tickers/${coinId}`)
-      ).json();
-      setInfo(infoData);
-      setPriceInfo(priceData);
-      setLoading(false);
-    })();
-  }, [coinId]); */
 
   return (
     <Container>
