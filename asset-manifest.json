@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/coin-tracker/static/js/main.41be721a.js",
+    "index.html": "/coin-tracker/index.html",
+    "main.41be721a.js.map": "/coin-tracker/static/js/main.41be721a.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.41be721a.js"
+  ]
+}
